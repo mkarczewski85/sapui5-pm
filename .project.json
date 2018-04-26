@@ -1,6 +1,7 @@
 {
   "projectType": [
     "sap.watt.uitools.ide.fiori",
+    "sap.watt.uitools.ide.web",
     "com.watt.common.builder.sapui5clientbuild"
   ],
   "build": {

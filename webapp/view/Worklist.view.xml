@@ -75,6 +75,7 @@
 								search="onSearch"
 								width="auto">
 							</SearchField>
+							<Button id="addButton" icon="sap-icon://add" press="onAdd" />
 						</Toolbar>
 					</headerToolbar>
 	
@@ -105,7 +106,9 @@
 							<cells>
 								<ObjectIdentifier
 									title="{ProductID}"
-									text="{Name}"/>
+									text="{Name}"
+									titleActive="true" 
+									titlePress="onShowDetailPopover"/>
 								<Text text="{SupplierName}"/>
 								<Link
 									text="{ToSupplier/WebAddress}"
@@ -128,7 +131,7 @@
 				<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
 			</semantic:sendEmailAction>
 
-
+		
 	</semantic:SemanticPage>
 
 </mvc:View>

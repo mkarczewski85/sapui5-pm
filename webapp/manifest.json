@@ -63,7 +63,11 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "opensap.manageproducts.i18n.i18n"
+					"bundleName": "opensap.manageproducts.i18n.i18n",
+					"defaultBindingMode": "TwoWay",
+					"metadataUrlParams": {
+						"sap-documentation": "heading"
+					}
 				}
 			},
 			"": {
@@ -85,22 +89,23 @@
 				},
 				"async": true
 			},
-			"routes": [
-				{
-					"pattern": "",
-					"name": "worklist",
-					"target": [
-						"worklist"
-					]
-				},
-				{
-					"pattern": "ProductSet/{objectId}",
-					"name": "object",
-					"target": [
-						"object"
-					]
-				}
-			],
+			"routes": [{
+				"pattern": "",
+				"name": "worklist",
+				"target": [
+					"worklist"
+				]
+			}, {
+				"pattern": "ProductSet/{objectId}",
+				"name": "object",
+				"target": [
+					"object"
+				]
+			}, {
+				"pattern": "AddProduct",
+				"name": "add",
+				"target": "add"
+			}],
 			"targets": {
 				"worklist": {
 					"viewName": "Worklist",
@@ -121,6 +126,11 @@
 				"notFound": {
 					"viewName": "NotFound",
 					"viewId": "notFound"
+				},
+				"add": {
+					"viewName": "Add",
+					"viewId": "add",
+					"viewLevel": 3
 				}
 			}
 		}

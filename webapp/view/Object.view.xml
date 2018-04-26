@@ -11,7 +11,8 @@
 		headerPinnable="false"
 		toggleHeaderOnTitleClick="false"
 		busy="{objectView>/busy}"
-		busyIndicatorDelay="{objectView>/delay}">
+		busyIndicatorDelay="{objectView>/delay}"
+		>
 
 		<semantic:titleHeading>
 			<Title text="{ProductID}" />
@@ -21,6 +22,8 @@
 			<ObjectHeader
 				id="objectHeader"
 				title="{ProductID}"
+				titleActive="true"
+	    		titlePress="onShowDetailPopover"
 				responsive="true"
 				number="{
 							path: 'Price',
