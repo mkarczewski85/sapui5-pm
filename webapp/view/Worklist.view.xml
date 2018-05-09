@@ -43,7 +43,7 @@
 					iconColor="Negative"
 					text="{i18n>worklistFilterExpensive}"
 					count="{worklistView>/expensive}"
-					key="Expensive" />
+					key="expensive" />
 			</items>
 			<content>
 				<Table
@@ -75,7 +75,7 @@
 								search="onSearch"
 								width="auto">
 							</SearchField>
-							<Button id="addButton" icon="sap-icon://add" press="onAdd" />
+							<Button id="addButton" icon="sap-icon://add-product" press="onAdd" />
 						</Toolbar>
 					</headerToolbar>
 	

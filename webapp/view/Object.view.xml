@@ -36,8 +36,31 @@
 			</ObjectHeader>
 			<mvc:XMLView viewName="opensap.manageproducts.view.ProductDetails"/>
 			<core:Fragment fragmentName="opensap.manageproducts.view.SupplierInfo" type="XML"/>
+			<Panel
+				class="sapUiContentPadding"
+				headerText="{i18n>ObjectCommentsTabTitle}">
+				<content>
+					<FeedInput post="onPost"/>
+					<List
+						id="idCommentsList"
+						noDataText="{i18n>ObjectCommentNoData}"
+						showSeparators="Inner"
+						items="{
+							path: 'productFeedback>/productComments',
+							sorter: {
+							    path: 'date',
+							    descending: true
+							}
+						}">
+						<FeedListItem
+							info="{productFeedback>type}"
+							text="{productFeedback>comment}"
+							timestamp="{productFeedback>date}"/>
+					</List>
+				</content>
+			</Panel>
 		</semantic:headerContent>
-
+		
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
